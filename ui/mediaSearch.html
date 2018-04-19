@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Media Search</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script>
+       angular.module('mediaSearch',[]).controller('searchController', ['$scope', function ($scope) {
+           $scope.playVideo = function (){
+               var queryPlayer = document.getElementById("queryPlayer");
+               queryPlayer.pause();
+               document.getElementById("source").setAttribute("src",$scope.queryVideo);
+               queryPlayer.load();
+               queryPlayer.play();
+           }
+       }]);
+    </script>
+</head>
+<body>
+<div ng-app="mediaSearch" ng-controller="searchController" class="query" style="width: 50%;display: inline-block">
+   <div style="width: 100%;text-align: center">
+       <select name="queryVideo" ng-model="queryVideo" ng-change="playVideo()">
+           <option value="../videos/query/first.mp4" selected>First</option>
+           <option value="../videos/query/second.mp4">Second</option>
+       </select>
+   </div>
+    <br><br><br>
+    <div style="width: 100%;text-align: center">
+        <video id="queryPlayer" width="352" height="288" controls>
+            <source id="source" src="../videos/query/first.mp4">
+        </video>
+    </div>
+
+</div>
+<div class="video" style="width: 50%;display: inline-block">
+
+</div>
+</body>
+</html>
