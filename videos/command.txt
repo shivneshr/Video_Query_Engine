@@ -1,0 +1,1 @@
+ffmpeg -f image2 -r 30 -pix_fmt rgb24 -vcodec rawvideo -start_number 001 -s 352*288 -i second%03d.rgb -i second.wav second.mp4
