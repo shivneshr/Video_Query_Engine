@@ -84,7 +84,7 @@ def extractKeyFrames_Second(video_path,videoName,keyframePath):
 	# Read the first frame.
 	ret, frame = cap.read()
 
-	multiplier = 30
+	multiplier = 15
 
 	if not os.path.exists(keyframePath + videoName):
 		os.makedirs(keyframePath + videoName)
@@ -219,7 +219,7 @@ def extract_CNN_features(path):
 
 # Finds the similarity between any given query video & database folders (lower the score better similarity)
 
-findDifference(keyframePath_query+"Q5.MP4",keyframePath_database)
+findDifference(keyframePath_query+"HQ4.MP4",keyframePath_database)
 
 
 
