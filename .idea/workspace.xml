@@ -2,186 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3d947b5a-f1bd-4a6b-9838-f9f9b933c3e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame10.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame11.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame12.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame13.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame14.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame15.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame16.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame17.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame18.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame19.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame5.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame6.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame7.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame8.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame9.jpg" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers_frame9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame10.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame11.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame12.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame13.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame14.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame15.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame16.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame17.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame18.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame19.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame5.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame6.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame7.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame8.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview_frame9.jpg" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview_frame9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame10.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame11.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame12.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame13.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame14.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame15.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame16.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame17.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame18.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame19.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame5.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame6.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame7.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame8.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie_frame9.jpg" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie_frame9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame10.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame11.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame12.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame13.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame14.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame15.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame16.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame17.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame18.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame19.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame5.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame6.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame7.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame8.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame9.jpg" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame10.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame11.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame12.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame13.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame14.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame15.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame16.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame17.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame18.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame19.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame5.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame6.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame7.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame8.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports_frame9.jpg" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports_frame9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame10.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame11.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame12.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame13.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame14.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame15.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame16.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame17.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame18.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame19.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame5.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame6.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame7.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame8.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame9.jpg" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame10.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame10.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame11.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame11.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame12.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame12.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame13.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame13.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame14.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame14.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame15.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame15.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame16.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame16.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame17.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame17.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame18.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame18.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame19.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame19.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame5.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame5.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame6.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame6.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame7.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame7.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame8.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame8.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame9.jpg" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic_frame9.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q5.MP4/Q5.MP4_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q5.MP4/Q5.MP4_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q5.MP4/Q5.MP4_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q5.MP4/Q5.MP4_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q5.MP4/Q5.MP4_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q5.MP4/Q5.MP4_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q5.MP4/Q5.MP4_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_query/Q5.MP4/Q5.MP4_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/first/first_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_query/first/first_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/first/first_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_query/first/first_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/first/first_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_query/first/first_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/first/first_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_query/first/first_frame4.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/second/second_frame1.jpg" afterPath="$PROJECT_DIR$/keyframes_query/second/second_frame1.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/second/second_frame2.jpg" afterPath="$PROJECT_DIR$/keyframes_query/second/second_frame2.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/second/second_frame3.jpg" afterPath="$PROJECT_DIR$/keyframes_query/second/second_frame3.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/second/second_frame4.jpg" afterPath="$PROJECT_DIR$/keyframes_query/second/second_frame4.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/flowers/flowers.pickle" afterPath="$PROJECT_DIR$/keyframes_database/flowers/flowers.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/interview/interview.pickle" afterPath="$PROJECT_DIR$/keyframes_database/interview/interview.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/movie/movie.pickle" afterPath="$PROJECT_DIR$/keyframes_database/movie/movie.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo.pickle" afterPath="$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/sports/sports.pickle" afterPath="$PROJECT_DIR$/keyframes_database/sports/sports.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft.pickle" afterPath="$PROJECT_DIR$/keyframes_database/starcraft/starcraft.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_database/traffic/traffic.pickle" afterPath="$PROJECT_DIR$/keyframes_database/traffic/traffic.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4.pickle" afterPath="$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4.pickle" afterPath="$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4.pickle" afterPath="$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4.pickle" afterPath="$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4.pickle" afterPath="$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/Q5.MP4/Q5.MP4.pickle" afterPath="$PROJECT_DIR$/keyframes_query/Q5.MP4/Q5.MP4.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/first/first.pickle" afterPath="$PROJECT_DIR$/keyframes_query/first/first.pickle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/keyframes_query/second/second.pickle" afterPath="$PROJECT_DIR$/keyframes_query/second/second.pickle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RGBRelation/rgbRelationBruteForce.py" afterPath="$PROJECT_DIR$/RGBRelation/rgbRelationBruteForce.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pipeline/Similarity_Pipeline.py" afterPath="$PROJECT_DIR$/pipeline/Similarity_Pipeline.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -192,31 +14,55 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/multimedia_project$audioTest.coverage" NAME="audioTest Coverage Results" MODIFIED="1525031048664" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/audioRelation" />
+    <SUITE FILE_PATH="coverage/multimedia_project$rgbRelationBruteForce.coverage" NAME="rgbRelationBruteForce Coverage Results" MODIFIED="1524987065869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/RGBRelation" />
+    <SUITE FILE_PATH="coverage/multimedia_project$testMotionEstimation.coverage" NAME="testMotionEstimation Coverage Results" MODIFIED="1525056811496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/motionEstimation" />
     <SUITE FILE_PATH="coverage/multimedia_project$Similarity_Pipeline.coverage" NAME="Similarity_Pipeline Coverage Results" MODIFIED="1524973751009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pipeline" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Similarity_Pipeline.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pipeline/Similarity_Pipeline.py">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="testMotionEstimation.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/motionEstimation/testMotionEstimation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="227" column="0" lean-forward="true" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+            <state relative-caret-position="360">
+              <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
               <folding>
-                <element signature="e#42#52#0" expanded="true" />
+                <element signature="e#0#16#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="codecs.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/codecs.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/RGBRelation/rgbRelationBruteForce.py" />
+        <option value="$PROJECT_DIR$/audioRelation/audioTest.py" />
         <option value="$PROJECT_DIR$/pipeline/Similarity_Pipeline.py" />
+        <option value="$PROJECT_DIR$/motionEstimation/testMotionEstimation.py" />
       </list>
     </option>
   </component>
@@ -226,10 +72,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="y" value="22" />
-    <option name="width" value="1440" />
+    <option name="width" value="989" />
     <option name="height" value="804" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -246,7 +95,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,11 +102,17 @@
               <item name="multimedia_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="multimedia_project" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="multimedia_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="multimedia_project" type="462c0819:PsiDirectoryNode" />
+              <item name="videos" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,7 +132,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Similarity_Pipeline">
+  <component name="RunManager" selected="Python.testMotionEstimation">
     <configuration name="Similarity_Pipeline" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -297,9 +151,72 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="audioTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/audioRelation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="multimedia_project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/audioRelation/audioTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="rgbRelationBruteForce" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/RGBRelation" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="multimedia_project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RGBRelation/rgbRelationBruteForce.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration name="testMotionEstimation" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/motionEstimation" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="multimedia_project" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/motionEstimation/testMotionEstimation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Python.Similarity_Pipeline" />
+      <item index="1" class="java.lang.String" itemvalue="Python.rgbRelationBruteForce" />
+      <item index="2" class="java.lang.String" itemvalue="Python.audioTest" />
+      <item index="3" class="java.lang.String" itemvalue="Python.testMotionEstimation" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.Similarity_Pipeline" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.testMotionEstimation" />
+        <item index="1" class="java.lang.String" itemvalue="Python.audioTest" />
+        <item index="2" class="java.lang.String" itemvalue="Python.rgbRelationBruteForce" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Similarity_Pipeline" />
       </list>
     </recent_temporary>
   </component>
@@ -319,28 +236,37 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1440" height="804" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32863188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32863188" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32769045" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17167382" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39915374" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34220073" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -358,112 +284,22 @@
           <line>3</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/audioRelation/audioTest.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/motionEstimation/testMotionEstimation.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/keyframes/sports/sports_frame14.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/HQ1.MP4/HQ1.MP4_frame0.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/HQ1.MP4/HQ1.MP4_frame7.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/HQ1.MP4/HQ1.MP4_frame8.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/HQ1.MP4/HQ1.MP4_frame5.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/HQ2.MP4/HQ2.MP4_frame3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/HQ2.MP4/HQ2.MP4_frame1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/HQ2.MP4/HQ2.MP4_frame9.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/HQ2.MP4/HQ2.MP4_frame12.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/HQ2.MP4/HQ2.MP4_frame30.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/HQ4.MP4/HQ4.MP4_frame2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/Q3.MP4/Q3.MP4_frame0.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/Q4.MP4/Q4.MP4_frame1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes/Q5.MP4/Q5.MP4_frame2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_database/flowers/flowers_frame1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_database/flowers/flowers_frame12.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_database/flowers/flowers_frame18.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_database/flowers/flowers_frame19.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_database/interview/interview_frame2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_database/interview/interview_frame15.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/keyframes_database/interview/interview_frame18.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -504,32 +340,12 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame4.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame3.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4_frame1.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -549,22 +365,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4_frame1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4_frame2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame3.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -584,26 +385,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame5.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame8.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame4.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -614,12 +395,186 @@
         <state />
       </provider>
     </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/audioread/rawread.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RGBRelation/rgbRelationBruteForce.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="6" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame8.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ1.MP4/HQ1.MP4_frame7.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame6.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_database/musicvideo/musicvideo_frame1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_database/movie/movie_frame3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_database/movie/movie_frame9.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_database/movie/movie_frame15.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_database/movie/movie_frame19.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame14.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame8.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame17.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_database/starcraft/starcraft_frame4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audioRelation/audioTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pipeline/Similarity_Pipeline.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="227" column="0" lean-forward="true" selection-start-line="227" selection-start-column="0" selection-end-line="227" selection-end-column="0" />
+        <state relative-caret-position="3030">
+          <caret line="202" column="0" lean-forward="true" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
           <folding>
             <element signature="e#42#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/Q3.MP4/Q3.MP4_frame1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ4.MP4/HQ4.MP4_frame1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/HQ2.MP4/HQ2.MP4_frame1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/python3/3.6.1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame2.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame3.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/keyframes_query/Q4.MP4/Q4.MP4_frame5.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motionEstimation/testMotionEstimation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="30" lean-forward="true" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
           </folding>
         </state>
       </provider>

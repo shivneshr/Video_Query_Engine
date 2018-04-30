@@ -51,5 +51,5 @@ def getMatchingFrames(queryPath, diffMethod):
 
 
 # Please give directory name of the query
-queryDirName = "first"
+queryDirName = "HQ2.MP4"
 getMatchingFrames(".." + fileSeparator + "keyframes_query"+fileSeparator+ queryDirName + fileSeparator, cv2.HISTCMP_CORREL)

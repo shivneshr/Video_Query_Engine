@@ -46,7 +46,6 @@ queryPath = "/Users/shivnesh/Documents/shivnesh_git/multimedia_project/videos/qu
 databasePath = "/Users/shivnesh/Documents/shivnesh_git/multimedia_project/videos/search/"
 
 
-
 p_frame_thresh = 90000  # You may need to adjust this threshold for keyframes extraction (lower -> more frames)
 
 
