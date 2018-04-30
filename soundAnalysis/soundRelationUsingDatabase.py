@@ -1,10 +1,12 @@
 import librosa
+import matplotlib.pyplot as plt
 from dtw import dtw
 import numpy as np
 import glob
 import json
 import platform
 from numpy.linalg import norm
+from subprocess import Popen
 
 fileSeparator = "/"
 if platform.system() == "Windows":
@@ -38,9 +40,30 @@ def findBestMatchedAudio(queryPath):
         audioBestRange[audioName] = timeframe
 
     sortedDiffs = [(k, audioMinDiffs[k]) for k in sorted(audioMinDiffs, key=audioMinDiffs.get, reverse=False)]
-
-    print("Best matched audio : ", sortedDiffs[0][0])
-    print("Best matched timeFrame : ", audioBestRange[sortedDiffs[0][0]])
+    return sortedDiffs[0][0], audioBestRange[sortedDiffs[0][0]]
 
 queryAudioName = "HQ4"
-findBestMatchedAudio(".."+fileSeparator+"music_query"+fileSeparator+queryAudioName+".wav")
+queryPath = ".."+fileSeparator+"music_query"+fileSeparator+queryAudioName+".wav"
+audioName, bestMatchTimeFrame = findBestMatchedAudio(queryPath)
+# audioName = 'flowers.wav'
+# bestMatchTimeFrame = [10.0,15.0]
+print("Best matched audio : ", audioName)
+print("Best matched timeFrame : ", bestMatchTimeFrame)
+
+q, qsr = librosa.load(queryPath)
+qmfcc = librosa.feature.mfcc(q, qsr)
+plt.plot(qmfcc)
+plt.savefig("queryMFCC.png")
+plt.close()
+
+v,vsr = librosa.load(".."+fileSeparator+"music_database"+fileSeparator+audioName,offset=bestMatchTimeFrame[0], duration=(bestMatchTimeFrame[1]-bestMatchTimeFrame[0]))
+vmfcc = librosa.feature.mfcc(v, vsr)
+plt.plot(vmfcc)
+plt.savefig("videoMFCC.png")
+plt.close()
+
+if platform.system() == "Windows":
+    p = Popen("moveToUI.bat")
+else:
+    p = Popen("moveToUI.sh")
+p.communicate()
