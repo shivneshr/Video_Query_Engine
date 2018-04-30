@@ -1,8 +1,9 @@
+import os
+import re
+import pickle
+
 import cv2 as cv
 import numpy as np
-
-frames = ['Q4.MP4_frame1.jpg', 'Q4.MP4_frame2.jpg', 'Q4.MP4_frame3.jpg', 'Q4.MP4_frame4.jpg', 'Q4.MP4_frame5.jpg',
-		  'Q4.MP4_frame6.jpg', 'Q4.MP4_frame7.jpg', 'Q4.MP4_frame8.jpg', 'Q4.MP4_frame9.jpg']
 
 # params for ShiTomasi corner detection
 feature_params = dict(maxCorners=100,
@@ -15,42 +16,89 @@ lk_params = dict(winSize=(15, 15),
 				 maxLevel=2,
 				 criteria=(cv.TERM_CRITERIA_EPS | cv.TERM_CRITERIA_COUNT, 10, 0.03))
 
-# Create some random colors
-color = np.random.randint(0, 255, (100, 3))
-# Take first frame and find corners in it
-old_gray = cv.imread('../keyframes_query/Q4.MP4/' + frames[0], 0)
-p0 = cv.goodFeaturesToTrack(old_gray, mask=None, **feature_params)
+numbers = re.compile(r'(\d+)')
 
-# Create a mask image for drawing purposes
-mask = np.zeros_like(old_gray)
 
-for frameName in frames[1:]:
-	frame = cv.imread('../keyframes_query/Q4.MP4/' + frameName, 0)
+def numericalSort(value):
+	parts = numbers.split(value)
+	parts[1::2] = map(int, parts[1::2])
+	return parts
 
-	frame_gray = frame
 
-	# calculate optical flow
-	p1, st, err = cv.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, None, **lk_params)
-	# Select good points
+def calculate_motion_vectors(path):
+	global feature_params, lk_params
 
-	change_in_x = p1[:, :, 0]
-	change_in_y = p1[:, :, 1]
+	filelist = sorted([file for file in os.listdir(path) if file.endswith('.jpg')], key=numericalSort)
 
-	good_new = p1[st == 1]
-	good_old = p0[st == 1]
+	motionvector = []
 
-	# draw the tracks
-	for i, (new, old) in enumerate(zip(good_new, good_old)):
-		a, b = new.ravel()
-		c, d = old.ravel()
-		mask = cv.line(mask, (a, b), (c, d), color[i].tolist(), 2)
-		frame = cv.circle(frame, (a, b), 5, color[i].tolist(), -1)
-	img = cv.add(frame, mask)
-	cv.imshow('frame', img)
-	k = cv.waitKey(30) & 0xff
-	if k == 27:
-		break
-	# Now update the previous frame and previous points
-	old_gray = frame_gray.copy()
-	p0 = good_new.reshape(-1, 1, 2)
-cv.destroyAllWindows()
+	for index in range(len(filelist) - 1):
+		frame1 = cv.imread(path +'/'+ filelist[index], 0)
+		frame2 = cv.imread(path +'/'+ filelist[index + 1], 0)
+
+		# Getting the features in frame 1 to track
+		p0 = cv.goodFeaturesToTrack(frame1, mask=None, **feature_params)
+
+		# calculate optical flow
+		p1, st, err = cv.calcOpticalFlowPyrLK(frame1, frame2, p0, None, **lk_params)
+
+		motionvector.append(np.sum(np.absolute(p1)))
+
+	location = path + '/' + path.split('/')[-1] + '_motion.pickle'
+	with open(location, 'wb') as handle:
+		pickle.dump(motionvector, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+def motion_estimation(parent_path):
+
+	for dirs in os.listdir(parent_path):
+		calculate_motion_vectors(parent_path+'/'+dirs)
+
+
+def motion_vector_matching(queryPath,databasePath):
+
+	queryFeatures = None
+	databaseFeatures = None
+	queryFileName = queryPath.split('/')[-1]
+
+
+	with open(queryPath+'/'+queryFileName+'_motion.pickle', 'rb') as handle:
+		queryFeatures = pickle.load(handle)
+
+
+	querysum = sum(queryFeatures)
+	window = len(queryFeatures)
+	match_factor = {}
+
+
+	for folder in os.listdir(databasePath):
+
+		location = databasePath + '/' + folder +'/'+ folder +'_motion.pickle'
+		with open(location, 'rb') as handle:
+			databaseFeatures = pickle.load(handle)
+
+		minDist = float('inf')
+
+		for index in range(len(databaseFeatures)-window):
+
+			#print(databaseFeatures[index:index+window])
+			temp = abs(sum(databaseFeatures[index:index+window]) - querysum)
+
+			if(minDist>temp):
+				minDist = temp
+
+		match_factor[folder] = minDist
+
+
+
+	for key, value in sorted(match_factor.items(), key=lambda x: x[1]):
+		print("%s: %s" % (key, value))
+
+#motion_estimation('../keyframes_database')
+#motion_estimation('../keyframes_query')
+
+
+motion_vector_matching('../keyframes_query/second','../keyframes_database')
+
+
+
