@@ -25,9 +25,9 @@ import soundRelationUsingDatabase as audio
 if platform.system() == "Windows":
     Popen("clearOutput.bat")
 else:
-    Popen("clearOutput.sh")
+    Popen(["sh","clearOutput.sh"])
 
-query = "HQ1.MP4"
+query = "HQ4.MP4"
 pipeline.find_match_CNN(query)
 rgb.getTop3MatchedVideosWithTimeFrame(query)
 audio.getTop3MathcedAudiosWithTimeFrame(query)
