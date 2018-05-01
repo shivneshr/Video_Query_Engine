@@ -128,7 +128,7 @@ def extractKeyFrames_Second(video_path, videoName, keyframePath):
     print("Complete")
 
 
-def iterateThroughDirectory(directory, keyframepath):
+def iterateThroughDirectory_keyframes(directory, keyframepath):
     for files in os.listdir(directory):
         print("Processing ", files)
         if os.path.isfile(directory + files):
@@ -136,7 +136,7 @@ def iterateThroughDirectory(directory, keyframepath):
 
 
 def write_to_pickle_file(folder, keyframePath):
-    global featureList, labelList, currentFolder, previousFolder
+    global featureList, labelList
 
     location = keyframePath + folder + fileSeparator + folder + '.pickle'
     lableLocation = keyframePath + folder + fileSeparator + folder + '_label.pickle'
@@ -147,10 +147,17 @@ def write_to_pickle_file(folder, keyframePath):
     with open(lableLocation, 'wb') as handle:
         pickle.dump(labelList, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
-    currentFolder = previousFolder
     featureList = []
     labelList = []
 
+def fix_segment_outofbounds(segment,len):
+
+	if segment < 1:
+		return 1
+	elif segment > len or segment+9 > len:
+		return len - 9
+	else:
+		return segment
 
 def find_match_CNN(queryName):
     queryPath = keyframePath_query + queryName
@@ -182,8 +189,8 @@ def find_match_CNN(queryName):
                     minDist, min_index_d, min_index_q = sum, index_d + 1, index_q + 1
 
         segment = min_index_d - min_index_q
-        if segment < 1:
-            segment = 1
+
+        segment = fix_segment_outofbounds(segment,len(databaseFeatures))
         match_factor[folder] = {"distance": minDist, "index_d": min_index_d, "index_q": min_index_q, "segment": segment}
 
 
@@ -197,26 +204,28 @@ def find_match_CNN(queryName):
     audio.generateAudioMfccImages(rankedOutput, queryName, 'CNN')
 
 
-# print("%s: %s" % (key, value))
+
+def iterateThroughDirectory_CNN(directory):
+
+    for folders in os.listdir(directory):
+        print("Processing ", folders)
+        if os.path.isdir(directory + folders):
+            extract_CNN_features(directory,directory + folders)
 
 
-def extract_CNN_features(path):
-    global previousFolder, currentFolder, featureList
+def extract_CNN_features(directory,path):
+    global featureList, labelList
 
     for root, dirs, files in os.walk(path):
 
-        if previousFolder != "" and currentFolder != previousFolder:
-            write_to_pickle_file(previousFolder, path)
-
         files = sorted([file for file in files if file.endswith('.jpg')], key=numericalSort)
+
         for name in files:
 
-            if not (len(onlyfor) == 0 or (len(onlyfor) != 0 and (root.split(fileSeparator)[-1] in onlyfor))):
-                break
+            #if not (len(onlyfor) == 0 or (len(onlyfor) != 0 and (root.split(fileSeparator)[-1] in onlyfor))):
+            #    break
 
             print(os.path.join(root, name))
-
-            previousFolder = root.split(fileSeparator)[-1]
             # Load an image in PIL format
             original = load_img(os.path.join(root, name), target_size=(224, 224))
 
@@ -247,20 +256,19 @@ def extract_CNN_features(path):
             labelList.append(label[0])
             featureList.append(intermediate_output[0])
 
-        if previousFolder != "" and currentFolder != previousFolder:
-            write_to_pickle_file(previousFolder, path)
+        write_to_pickle_file(path.split('/')[-1], directory)
 
 
 # Extracts the keyframes of the set of videos and stores result in keyframes folder
-# iterateThroughDirectory(databasePath,keyframePath_database)
+# iterateThroughDirectory_keyframes(databasePath,keyframePath_database)
 
 # Extracts the keyframes of the set of videos and stores result in keyframes folder
-# iterateThroughDirectory(queryPath,keyframePath_query)
+# iterateThroughDirectory_keyframes(queryPath,keyframePath_query)
 
 # Extracts the CNN features for all the video files and stores in Pickle file in corresponding directory
 
 # For database videos
-# extract_CNN_features(keyframePath_database)
+#iterateThroughDirectory_CNN(keyframePath_database)
 
 # For Query videos
 

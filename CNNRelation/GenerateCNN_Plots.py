@@ -25,6 +25,8 @@ def loadPickleFiles(location):
 
 def __generateVideoPlot(databaseVideoName, queryVideoName, segment, procname, rank):
 
+	segment = segment - 1
+
 	# CNN file
 	database_CNN_Video_file = keyframePath_database + databaseVideoName +fileSeparator+ databaseVideoName +'.pickle'
 	query_CNN_Video_file = keyframePath_query + queryVideoName +fileSeparator+ queryVideoName +'.pickle'
@@ -46,21 +48,18 @@ def __generateVideoPlot(databaseVideoName, queryVideoName, segment, procname, ra
 	for index_d,index_q in zip(range(segment,segment+9),range(0,9)):
 
 		db_label = [[label1[1],label2[1]] for label1,label2 in zip(CNN_DB_Label[index_d],CNN_Query_Label[index_q])]
-		np_db_label = np.array(db_label)
-
-		#query_label = [label[1] for label in CNN_Query_Label[index]]
 
 		diff = np.absolute(CNN_DB_Video[index_d] - CNN_Query_Video[index_q])
 		sum = np.sum(diff)
 
 		fig, ax = plt.subplots()
-		# Hide axes
+
+		# Hide axes as we want to show only the tables
 		ax.xaxis.set_visible(False)
 		ax.yaxis.set_visible(False)
 
-		# Table from Ed Smith answer
+		#
 		clust_data = np.array(db_label)
-		#clust_data = np.random.random((10,2))
 		collabel = ("Database Video", "Query Video match(" + str(sum) + ")")
 		ax.table(cellText=clust_data, colLabels=collabel, loc='center')
 
