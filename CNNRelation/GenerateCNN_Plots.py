@@ -78,8 +78,8 @@ def __generateVideoPlot(databaseVideoName, queryVideoName, segment, procname, ra
 	if platform.system() == "Windows":
 		Popen([".."+fileSeparator+"CNNRelation"+fileSeparator+"convertCNNVideo.bat",videoName])
 	else:
-		Popen(['sh',".."+fileSeparator+"CNNRelation"+fileSeparator+ "convertCNNVideo.sh"])
-		shutil.move(".."+fileSeparator+"CNNRelation"+fileSeparator+'raw/CNNMatch.mp4','../ui/CNN/videos/'+videoName)
+		Popen(['sh',".."+fileSeparator+"CNNRelation"+fileSeparator+ "convertCNNVideo.sh",videoName])
+		# shutil.move(".."+fileSeparator+"CNNRelation"+fileSeparator+'raw/CNNMatch.mp4','../ui/CNN/videos/'+videoName)
 
 def generateVideoPlots(videoTimeFrameArray, queryVideoName, mainType):
 	for index, videoTimeFrame in enumerate(videoTimeFrameArray):
