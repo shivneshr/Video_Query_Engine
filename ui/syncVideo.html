@@ -1,33 +1,162 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <script src="popcorn.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Media Search</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="popcorn.js"></script>
+    <script>
+       angular.module('mediaSearch',[]).controller('searchController', ['$scope', function ($scope) {
+            $scope.asrc = "/Users/shivnesh/Documents/shivnesh_git/multimedia_project/videos/search/musicvideo.mp4"
+           /*$scope.playVideo = function (){
+               var queryPlayer = document.getElementById("queryPlayer");
+               queryPlayer.pause();
+               document.getElementById("source").setAttribute("src",$scope.queryVideo);
+               queryPlayer.load();
+               queryPlayer.play();
+           }*/
+       }]);
+    </script>
+    <style>
+
+    video{
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    .form-ele {
+      max-width:80%;
+    }
+    </style>
 </head>
 <body>
+  <center>
+    <div class="jumbotron">
+      <h2>Video Similarity Indexer and Search</h2>
+    </div>
+    <div ng-app="mediaSearch" ng-controller="searchController" class="query" style="width: 90%;">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <div class="row">
+            <label for="type">Type Select</label>
+          </div>
+          <div class="form-ele row">
+            <select class="form-control" id="type">
+              <option>CNN</option>
+              <option>RGB</option>
+              <option>Audio</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="row">
+            <label for="matched">Matched Videos</label>
+          </div>
+          <div class="row form-ele">
+            <select class="form-control" id="type">
+              <option>Video 1</option>
+              <option>Video 2</option>
+              <option>Video 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+          <div class="row">
+            <label for="matched">Seek (put value here)</label>
+          </div>
+          <div class="row form-ele">
+            <input type="range" value="0" id="scrub" />
+          </div>
+        </div>
+      </div>
 
-  <video height="180" width="300" id="a" controls>
-    <source src="https://videos.mozilla.org/serv/webmademovies/popcorntest.mp4"></source>
-    <source src="https://videos.mozilla.org/serv/webmademovies/popcorntest.ogv"></source>
-    <source src="https://videos.mozilla.org/serv/webmademovies/popcorntest.webm"></source>
-  </video>
-  <video height="180" width="300" id="b">
-    <source src="https://videos.mozilla.org/serv/webmademovies/popcorntest.mp4"></source>
-    <source src="https://videos.mozilla.org/serv/webmademovies/popcorntest.ogv"></source>
-    <source src="https://videos.mozilla.org/serv/webmademovies/popcorntest.webm"></source>
-  </video>
-  <video height="180" width="300" id="c">
-    <source src="https://videos.mozilla.org/serv/webmademovies/popcorntest.mp4"></source>
-    <source src="https://videos.mozilla.org/serv/webmademovies/popcorntest.ogv"></source>
-    <source src="https://videos.mozilla.org/serv/webmademovies/popcorntest.webm"></source>
-  </video>
-  <input type="range" value="0" id="scrub" />
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-3">
+          <div class="row">
+            <h3>CNN Match</h3>
+          </div>
+          <div class="row">
+            <video id="c">
+              <source src="../videos/search/musicvideo.mp4"></source>
+            </video>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+          <div class="row">
+            <h3>RGB Match</h3>
+          </div>
+          <div class="row">
+            <video id="d">
+              <source src="../videos/search/musicvideo.mp4"></source>
+            </video>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+          <div class="row">
+            <h3>Audio Match</h3>
+          </div>
+          <div class="row">
+            <video id="e">
+              <source src="../videos/search/musicvideo.mp4"></source>
+            </video>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3">
+          <div class="row">
+            <h3>Motion Estimation</h3>
+          </div>
+          <div class="row">
+            <video id="f">
+              <source src="../videos/search/musicvideo.mp4"></source>
+            </video>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <div class="row">
+            <h3>Original Video</h3>
+          </div>
+          <div class="row">
+            <video id="a" controls>
+              <source src="../videos/search/musicvideo.mp4"></source>
+            </video>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <div class="row">
+            <h3>Query Video</h3>
+          </div>
+          <div class="row">
+            <video id="b">
+              <source src="../videos/search/musicvideo.mp4"></source>
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </center>
 </body>
 <script type="text/javascript">
     var videos = {
       a: Popcorn("#a"),
       b: Popcorn("#b"),
-      c: Popcorn("#c")
+      c: Popcorn("#c"),
+      d: Popcorn("#d"),
+      e: Popcorn("#e"),
+      f: Popcorn("#f")
     },
     scrub = $("#scrub"),
     loadCount = 0,
@@ -65,20 +194,29 @@
                 }
                 videos.b.emit("timeupdate");
                 videos.c.emit("timeupdate");
+                videos.d.emit("timeupdate");
+                videos.e.emit("timeupdate");
+                videos.f.emit("timeupdate");
+
                 // update scrubber
                 scrub.val(this.currentTime());
-
                 return;
               }
 
               if (event === "seeking") {
                 videos.b.currentTime(this.currentTime());
                 videos.c.currentTime(this.currentTime());
+                videos.d.currentTime(this.currentTime());
+                videos.e.currentTime(this.currentTime());
+                videos.f.currentTime(this.currentTime());
               }
 
               if (event === "play" || event === "pause") {
                 videos.b[event]();
                 videos.c[event]();
+                videos.d[event]();
+                videos.e[event]();
+                videos.f[event]();
               }
             });
           });
@@ -91,6 +229,9 @@
       videos.a.currentTime(val);
       videos.b.currentTime(val);
       videos.c.currentTime(val);
+      videos.d.currentTime(val);
+      videos.e.currentTime(val);
+      videos.f.currentTime(val);
     });
 
     // With requestAnimationFrame, we can ensure that as
@@ -100,13 +241,18 @@
       if (videos.b.media.readyState === 4) {
         videos.b.currentTime(
           videos.a.currentTime(
-            videos.c.currentTime()
+            videos.c.currentTime(
+              videos.d.currentTime(
+                videos.e.currentTime(
+                  videos.f.currentTime()
+                )
+              )
+            )
           )
         );
       }
       requestAnimationFrame(sync);
     }
-
     sync();
 </script>
 </html>
