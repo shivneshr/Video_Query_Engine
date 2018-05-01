@@ -12,18 +12,16 @@ fileSeparator = "/"
 if platform.system() == "Windows":
     fileSeparator = "\\"
 
-def findBestMatchedAudio(queryPath):
+def __findBestMatchedAudio(queryPath):
 
     q, qsr = librosa.load(queryPath)
     qmfcc = librosa.feature.mfcc(q, qsr)
 
     file = open("musicDatabase.json", 'r')
     musicVideos = json.load(file)
-    print(musicVideos["flowers.wav"])
-
     audioMinDiffs = {}
     audioBestRange = {}
-    for audioPath in glob.glob(".."+ fileSeparator + "music_database"+fileSeparator+"*.wav"):
+    for audioPath in glob.glob(".." + fileSeparator + "music_database"+fileSeparator+"*.wav"):
         audioName = audioPath.split(fileSeparator)[-1]
         musicVideo = musicVideos[audioName]
         audioDiff = 100000000
@@ -38,32 +36,50 @@ def findBestMatchedAudio(queryPath):
             print("Dist", dist,audioDiff)
         audioMinDiffs[audioName] = audioDiff
         audioBestRange[audioName] = timeframe
-
     sortedDiffs = [(k, audioMinDiffs[k]) for k in sorted(audioMinDiffs, key=audioMinDiffs.get, reverse=False)]
-    return sortedDiffs[0][0], audioBestRange[sortedDiffs[0][0]]
+    best = {}
+    print(sortedDiffs)
+    for i in range(0, 3):
+        timeFrame = audioBestRange[sortedDiffs[i][0]]
+        best[i + 1] = {}
+        best[i + 1]["name"] = sortedDiffs[i][0].split(".")[0]
+        best[i + 1]["timeFrames"] = [timeFrame[0], timeFrame[1]]
+    return best
 
-queryAudioName = "HQ4"
-queryPath = ".."+fileSeparator+"music_query"+fileSeparator+queryAudioName+".wav"
-audioName, bestMatchTimeFrame = findBestMatchedAudio(queryPath)
-# audioName = 'flowers.wav'
-# bestMatchTimeFrame = [10.0,15.0]
-print("Best matched audio : ", audioName)
-print("Best matched timeFrame : ", bestMatchTimeFrame)
+#input
+#queryAudioName Eg - "HQ4"
+#output
+#{1: {'name': 'musicvideo', 'timeFrames': [4.0, 9.0]}, 2: {'name': 'sports', 'timeFrames': [15.0, 20.0]}, 3: {'name': 'traffic', 'timeFrames': [11.0, 16.0]}}
+def getTop3MathcedAudiosWithTimeFrame(queryAudioName):
+    queryPath = ".." + fileSeparator + "music_query" + fileSeparator + queryAudioName + ".wav"
+    return __findBestMatchedAudio(queryPath)
 
-q, qsr = librosa.load(queryPath)
-qmfcc = librosa.feature.mfcc(q, qsr)
-plt.plot(qmfcc)
-plt.savefig("queryMFCC.png")
-plt.close()
+# input
+# videoDirNameArray Eg - [ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ]
+# queryVideoDirName Eg - "first"
+# mainType Eg - "CNN"
+def generateAudioMfccImages(audioTimeFrameArray, queryAudioName, mainType):
+    queryPath = ".." + fileSeparator + "music_query" + fileSeparator + queryAudioName + ".wav"
+    q, qsr = librosa.load(queryPath)
+    qmfcc = librosa.feature.mfcc(q, qsr)
+    plt.plot(qmfcc)
+    plt.savefig("queryMFCC.png")
+    plt.close()
+    for index, audioTimeFrame in enumerate(audioTimeFrameArray):
+        audioName = audioTimeFrame[0]
+        timeFrame = audioTimeFrame[1]
+        audioPath = ".." + fileSeparator + "music_database" + fileSeparator + audioName + ".wav"
+        v, vsr = librosa.load(audioPath,offset=timeFrame[0], duration=(timeFrame[1] - timeFrame[0]))
+        vmfcc = librosa.feature.mfcc(v, vsr)
+        plt.plot(vmfcc)
+        plt.savefig(mainType + "_AUD_" + audioName + "_" + str(index+1) + ".png")
+        plt.close()
+    if platform.system() == "Windows":
+        p = Popen("moveToUI.bat")
+    else:
+        p = Popen("moveToUI.sh")
+    p.communicate()
+    p.wait()
 
-v,vsr = librosa.load(".."+fileSeparator+"music_database"+fileSeparator+audioName,offset=bestMatchTimeFrame[0], duration=(bestMatchTimeFrame[1]-bestMatchTimeFrame[0]))
-vmfcc = librosa.feature.mfcc(v, vsr)
-plt.plot(vmfcc)
-plt.savefig("videoMFCC.png")
-plt.close()
-
-if platform.system() == "Windows":
-    p = Popen("moveToUI.bat")
-else:
-    p = Popen("moveToUI.sh")
-p.communicate()
+print(getTop3MathcedAudiosWithTimeFrame("first"))
+generateAudioMfccImages([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "AUD")

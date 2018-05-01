@@ -64,6 +64,8 @@ def __getMatchingFrames(queryPath, diffMethod):
 
 # input
 # queryVideoDirName Eg - "first"
+# output
+# {1: {'name': 'musicvideo', 'timeFrames': [4.0, 9.0], 'keyFrames': [9, 17], 'matchPercentage': '99.9855173832883%'}, 2: {'name': 'movie', 'timeFrames': [1.5, 6.5], 'keyFrames': [4, 12], 'matchPercentage': '76.1068256730008%'}, 3: {'name': 'starcraft', 'timeFrames': [6.5, 11.5], 'keyFrames': [14, 22], 'matchPercentage': '71.72459734687709%'}}
 def getTop3MatchedVideosWithTimeFrame(queryVideoDirName):
     queryPath = ".." + fileSeparator + "keyframes_query"+fileSeparator+ queryVideoDirName + fileSeparator
     return __getMatchingFrames(queryPath, cv2.HISTCMP_CORREL)
@@ -71,7 +73,8 @@ def getTop3MatchedVideosWithTimeFrame(queryVideoDirName):
 # input
 # videoDirNameArray Eg - [ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ]
 # queryVideoDirName Eg - "first"
-def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName):
+# mainType Eg - "CNN"
+def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName, mainType):
     queryPath = ".." + fileSeparator + "keyframes_query" + fileSeparator + queryVideoDirName + fileSeparator
     for index, videoDirNameTimeFrame in enumerate(videoDirNameTimeFrameArray):
         videoDirName = videoDirNameTimeFrame[0]
@@ -91,7 +94,7 @@ def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName):
             plt.close()
 
         if platform.system() == "Windows":
-            p = subprocess.Popen(["convertToVideo.bat", "videoRGBMatch" + str(index + 1)])
+            p = subprocess.Popen(["convertToVideo.bat", mainType + "_RGB_" + videoDirName + "_" + str(index + 1)])
         else:
             p = subprocess.Popen(["convertToVideo.sh", "videoRGBMatch" + str(index + 1)])
         p.communicate()
@@ -116,4 +119,4 @@ def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName):
     p.wait()
 
 #getTop3MatchedVideosWithTimeFrame("first")
-#generateVideoHistogram([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first")
+#generateVideoHistogram([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "RGB")
