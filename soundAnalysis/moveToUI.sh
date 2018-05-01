@@ -1,3 +1,3 @@
 #!/bin/sh
-rm ../ui/sound/*.png
+cd ../soundAnalysis/
 mv *.png ../ui/sound/

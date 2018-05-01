@@ -1,2 +1,2 @@
-del ..\ui\sound\*.png
+cd ..\soundAnalysis\
 move *.png ..\ui\sound\

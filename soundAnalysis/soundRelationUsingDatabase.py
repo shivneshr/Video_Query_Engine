@@ -7,17 +7,35 @@ import json
 import platform
 from numpy.linalg import norm
 from subprocess import Popen
+import os
+import sys
 
 fileSeparator = "/"
 if platform.system() == "Windows":
     fileSeparator = "\\"
+
+# User defined functions
+
+UI_CNN_ScriptPath = ".."+fileSeparator+"CNNRelation"+fileSeparator
+UI_RGB_ScriptPath = ".."+fileSeparator+"RGBRelation"+fileSeparator
+UI_AUD_ScriptPath = ".."+fileSeparator+"soundAnalysis"+fileSeparator
+
+# Add the directory containing your module to the Python path (wants absolute paths)
+sys.path.append(os.path.abspath(UI_CNN_ScriptPath))
+sys.path.append(os.path.abspath(UI_RGB_ScriptPath))
+sys.path.append(os.path.abspath(UI_AUD_ScriptPath))
+
+import GenerateCNN_Plots as cnn
+import rgbRelationBruteForce as rgb
+import soundRelationUsingDatabase as audio
+
 
 def __findBestMatchedAudio(queryPath):
 
     q, qsr = librosa.load(queryPath)
     qmfcc = librosa.feature.mfcc(q, qsr)
 
-    file = open("musicDatabase.json", 'r')
+    file = open(".."+fileSeparator+"soundAnalysis"+fileSeparator+"musicDatabase.json", 'r')
     musicVideos = json.load(file)
     audioMinDiffs = {}
     audioBestRange = {}
@@ -52,7 +70,14 @@ def __findBestMatchedAudio(queryPath):
 #{1: {'name': 'musicvideo', 'timeFrames': [4.0, 9.0]}, 2: {'name': 'sports', 'timeFrames': [15.0, 20.0]}, 3: {'name': 'traffic', 'timeFrames': [11.0, 16.0]}}
 def getTop3MathcedAudiosWithTimeFrame(queryAudioName):
     queryPath = ".." + fileSeparator + "music_query" + fileSeparator + queryAudioName + ".wav"
-    return __findBestMatchedAudio(queryPath)
+    bestMatch = __findBestMatchedAudio(queryPath)
+    rankedOutput = []
+    for i in range (1,4):
+        rankedOutput.append((bestMatch[i]['name'],bestMatch[i]['timeFrames']))
+    cnn.generateVideoPlots(rankedOutput, queryAudioName, 'AUD')
+    rgb.generateVideoHistogram(rankedOutput, queryAudioName, 'AUD')
+    audio.generateAudioMfccImages(rankedOutput, queryAudioName, 'AUD')
+
 
 # input
 # audioTimeFrameArray Eg - [ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ]
@@ -63,7 +88,7 @@ def generateAudioMfccImages(audioTimeFrameArray, queryAudioName, mainType):
     q, qsr = librosa.load(queryPath)
     qmfcc = librosa.feature.mfcc(q, qsr)
     plt.plot(qmfcc)
-    plt.savefig("queryMFCC.png")
+    plt.savefig(".."+fileSeparator+"soundAnalysis"+fileSeparator+"queryMFCC.png")
     plt.close()
     for index, audioTimeFrame in enumerate(audioTimeFrameArray):
         audioName = audioTimeFrame[0]
@@ -72,14 +97,12 @@ def generateAudioMfccImages(audioTimeFrameArray, queryAudioName, mainType):
         v, vsr = librosa.load(audioPath,offset=timeFrame[0], duration=(timeFrame[1] - timeFrame[0]))
         vmfcc = librosa.feature.mfcc(v, vsr)
         plt.plot(vmfcc)
-        plt.savefig(mainType + "_AUD_" + audioName + "_" + str(index+1) + ".png")
+        plt.savefig(".."+fileSeparator+"soundAnalysis"+fileSeparator+mainType + "_AUD_" + audioName + "_" + str(index+1) + ".png")
         plt.close()
     if platform.system() == "Windows":
-        p = Popen("moveToUI.bat")
+        p = Popen("..\\soundAnalysis\\moveToUI.bat")
     else:
-        p = Popen("moveToUI.sh")
-    p.communicate()
-    p.wait()
+        p = Popen("../soundAnalysis/moveToUI.sh")
 
-print(getTop3MathcedAudiosWithTimeFrame("first"))
-generateAudioMfccImages([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "AUD")
+#print(getTop3MathcedAudiosWithTimeFrame("first"))
+#generateAudioMfccImages([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "AUD")

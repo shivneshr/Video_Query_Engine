@@ -3,10 +3,28 @@ import cv2
 import matplotlib.pyplot as plt
 import platform
 import subprocess
+import os
+import sys
 
 fileSeparator = "/"
 if platform.system() == "Windows":
     fileSeparator = "\\"
+
+# User defined functions
+
+UI_CNN_ScriptPath = ".."+fileSeparator+"CNNRelation"+fileSeparator
+UI_RGB_ScriptPath = ".."+fileSeparator+"RGBRelation"+fileSeparator
+UI_AUD_ScriptPath = ".."+fileSeparator+"soundAnalysis"+fileSeparator
+
+# Add the directory containing your module to the Python path (wants absolute paths)
+sys.path.append(os.path.abspath(UI_CNN_ScriptPath))
+sys.path.append(os.path.abspath(UI_RGB_ScriptPath))
+sys.path.append(os.path.abspath(UI_AUD_ScriptPath))
+
+import GenerateCNN_Plots as cnn
+import rgbRelationBruteForce as rgb
+import soundRelationUsingDatabase as audio
+
 
 def __findHist(imagePath):
     image = cv2.imread(imagePath)
@@ -68,7 +86,13 @@ def __getMatchingFrames(queryPath, diffMethod):
 # {1: {'name': 'musicvideo', 'timeFrames': [4.0, 9.0], 'keyFrames': [9, 17], 'matchPercentage': '99.9855173832883%'}, 2: {'name': 'movie', 'timeFrames': [1.5, 6.5], 'keyFrames': [4, 12], 'matchPercentage': '76.1068256730008%'}, 3: {'name': 'starcraft', 'timeFrames': [6.5, 11.5], 'keyFrames': [14, 22], 'matchPercentage': '71.72459734687709%'}}
 def getTop3MatchedVideosWithTimeFrame(queryVideoDirName):
     queryPath = ".." + fileSeparator + "keyframes_query"+fileSeparator+ queryVideoDirName + fileSeparator
-    return __getMatchingFrames(queryPath, cv2.HISTCMP_CORREL)
+    bestMatch = __getMatchingFrames(queryPath, cv2.HISTCMP_CORREL)
+    rankedOutput = []
+    for i in range(1, 4):
+        rankedOutput.append((bestMatch[i]['name'], bestMatch[i]['timeFrames']))
+    cnn.generateVideoPlots(rankedOutput, queryVideoDirName, 'RGB')
+    rgb.generateVideoHistogram(rankedOutput, queryVideoDirName, 'RGB')
+    audio.generateAudioMfccImages(rankedOutput, queryVideoDirName, 'RGB')
 
 # input
 # videoDirNameArray Eg - [ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ]
@@ -90,15 +114,13 @@ def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName, mainTy
                 histr = cv2.calcHist([img], [j], None, [256], [0, 256])
                 plt.plot(histr, color=col)
                 plt.xlim([0, 256])
-            plt.savefig(("video-00" if ((i + 1 - keyFrames[0])<10) else "video-0") + str(i + 1 - keyFrames[0]) + ".png")
+            plt.savefig((".."+fileSeparator+"RGBRelation"+fileSeparator+"video-00" if ((i + 1 - keyFrames[0])<10) else "video-0") + str(i + 1 - keyFrames[0]) + ".png")
             plt.close()
 
         if platform.system() == "Windows":
-            p = subprocess.Popen(["convertToVideo.bat", mainType + "_RGB_" + videoDirName + "_" + str(index + 1)])
+            subprocess.Popen(["..\\RGBRelation\\convertToVideo.bat", mainType + "_RGB_" + videoDirName + "_" + str(index + 1)])
         else:
-            p = subprocess.Popen(["convertToVideo.sh", "videoRGBMatch" + str(index + 1)])
-        p.communicate()
-        p.wait()
+            subprocess.Popen(["../RGBRelation/convertToVideo.bat", mainType + "_RGB_" + videoDirName + "_" + str(index + 1)])
 
     index = 1
     for filename in glob.glob(queryPath + "*.jpg"):
@@ -108,15 +130,13 @@ def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName, mainTy
             histr = cv2.calcHist([img], [j], None, [256], [0, 256])
             plt.plot(histr, color=col)
             plt.xlim([0, 256])
-        plt.savefig("video-00" + str(index) + ".png")
+        plt.savefig(".."+fileSeparator+"RGBRelation"+fileSeparator+"video-00" + str(index) + ".png")
         index = index + 1
         plt.close()
     if platform.system() == "Windows":
-        p = subprocess.Popen(["convertToVideo.bat", "queryRGBMatch"])
+        subprocess.Popen(["..\\RGBRelation\\convertToVideo.bat", "queryRGBMatch"])
     else:
-        p = subprocess.Popen(["convertToVideo.sh", "queryRGBMatch"])
-    p.communicate()
-    p.wait()
+        subprocess.Popen(["../RGBRelation/convertToVideo.bat", "queryRGBMatch"])
 
-getTop3MatchedVideosWithTimeFrame("first")
-generateVideoHistogram([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "RGB")
+#getTop3MatchedVideosWithTimeFrame("first")
+#generateVideoHistogram([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "RGB")

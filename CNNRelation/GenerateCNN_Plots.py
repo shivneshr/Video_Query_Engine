@@ -4,14 +4,18 @@ import numpy as np
 import pickle
 import matplotlib.pyplot as plt
 from subprocess import Popen
+import platform
+
+fileSeparator = "/"
+if platform.system() == "Windows":
+    fileSeparator = "\\"
 
 
-keyframePath_database = "/Users/shivnesh/Documents/shivnesh_git/multimedia_project/keyframes_database/"
-keyframePath_query = "/Users/shivnesh/Documents/shivnesh_git/multimedia_project/keyframes_query/"
+keyframePath_database = ".."+fileSeparator+"keyframes_database"+fileSeparator
+keyframePath_query = ".."+fileSeparator+"keyframes_query"+fileSeparator
 
 
 def loadPickleFiles(location):
-
 	pickleContent = []
 	with open(location, 'rb') as handle:
 		pickleContent = pickle.load(handle)
@@ -19,16 +23,15 @@ def loadPickleFiles(location):
 	return pickleContent
 
 
-
-def generateVideoPlots(databaseVideoName, queryVideoName, segment, procname,rank):
+def __generateVideoPlot(databaseVideoName, queryVideoName, segment, procname, rank):
 
 	# CNN file
-	database_CNN_Video_file = keyframePath_database + databaseVideoName +'/'+ databaseVideoName +'.pickle'
-	query_CNN_Video_file = keyframePath_query + queryVideoName +'/'+ queryVideoName +'.pickle'
+	database_CNN_Video_file = keyframePath_database + databaseVideoName +fileSeparator+ databaseVideoName +'.pickle'
+	query_CNN_Video_file = keyframePath_query + queryVideoName +fileSeparator+ queryVideoName +'.pickle'
 
 	# CNN Label file
-	database_CNN_Label_file = keyframePath_database + databaseVideoName +'/'+ databaseVideoName +'_label.pickle'
-	query_CNN_Label_file = keyframePath_query + queryVideoName + '/' + queryVideoName + '_label.pickle'
+	database_CNN_Label_file = keyframePath_database + databaseVideoName +fileSeparator+ databaseVideoName +'_label.pickle'
+	query_CNN_Label_file = keyframePath_query + queryVideoName + fileSeparator + queryVideoName + '_label.pickle'
 
 
 	CNN_DB_Video = loadPickleFiles(database_CNN_Video_file)
@@ -68,13 +71,20 @@ def generateVideoPlots(databaseVideoName, queryVideoName, segment, procname,rank
 			num = '0'+str(ctr)
 		else:
 			num = str(ctr)
-		plt.savefig('raw/video-'+num+'.jpg')
+		plt.savefig('..'+fileSeparator+'CNNRelation'+fileSeparator+'raw'+fileSeparator+'video-'+num+'.jpg')
+		plt.close()
 		ctr+=1
 
+	if platform.system() == "Windows":
+		Popen([".."+fileSeparator+"CNNRelation"+fileSeparator+"convertCNNVideo.bat",videoName])
+	else:
+		Popen(['sh',".."+fileSeparator+"CNNRelation"+fileSeparator+ "convertCNNVideo.sh"])
+		shutil.move(".."+fileSeparator+"CNNRelation"+fileSeparator+'raw/CNNMatch.mp4','../ui/CNN/videos/'+videoName)
 
-	Popen(['sh','./convertCNNVideo.sh'])
-	shutil.move('raw/CNNMatch.mp4','../ui/CNN/videos/'+videoName)
-
-#Popen(['sh','./convertCNNVideo.sh'])
+def generateVideoPlots(videoTimeFrameArray, queryVideoName, mainType):
+	for index, videoTimeFrame in enumerate(videoTimeFrameArray):
+		videoDirName = videoTimeFrame[0]
+		timeFrame = videoTimeFrame[1]
+		__generateVideoPlot(videoDirName, queryVideoName, int((timeFrame[0]+0.5)*2) , mainType, index + 1)
 
 
