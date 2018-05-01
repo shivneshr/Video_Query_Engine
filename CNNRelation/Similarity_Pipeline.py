@@ -20,6 +20,7 @@ if platform.system() == "Windows":
 
 # User defined functions
 
+UI_VID_ScriptPath = ".."+fileSeparator+"generateVideos"+fileSeparator
 UI_CNN_ScriptPath = ".."+fileSeparator+"CNNRelation"+fileSeparator
 UI_RGB_ScriptPath = ".."+fileSeparator+"RGBRelation"+fileSeparator
 UI_AUD_ScriptPath = ".."+fileSeparator+"soundAnalysis"+fileSeparator
@@ -28,11 +29,12 @@ UI_AUD_ScriptPath = ".."+fileSeparator+"soundAnalysis"+fileSeparator
 sys.path.append(os.path.abspath(UI_CNN_ScriptPath))
 sys.path.append(os.path.abspath(UI_RGB_ScriptPath))
 sys.path.append(os.path.abspath(UI_AUD_ScriptPath))
+sys.path.append(os.path.abspath(UI_VID_ScriptPath))
 
 import GenerateCNN_Plots as cnn
 import rgbRelationBruteForce as rgb
 import soundRelationUsingDatabase as audio
-
+import generateTailoredVideos as vid
 
 # Load the VGG model
 vgg_model = vgg16.VGG16(weights='imagenet')
@@ -199,6 +201,7 @@ def find_match_CNN(queryName):
         rankedOutput.append((key,[(value['segment'] / 2.0) - 0.5, ((value['segment'] + 8 )/ 2.0) + 0.5]))
 
 
+    vid.generateVideosForGivenTimeFrames(rankedOutput, 'CNN')
     cnn.generateVideoPlots(rankedOutput, queryName, 'CNN')
     rgb.generateVideoHistogram(rankedOutput, queryName, 'CNN')
     audio.generateAudioMfccImages(rankedOutput, queryName, 'CNN')
@@ -256,7 +259,7 @@ def extract_CNN_features(directory,path):
             labelList.append(label[0])
             featureList.append(intermediate_output[0])
 
-        write_to_pickle_file(path.split('/')[-1], directory)
+        write_to_pickle_file(path.split(fileSeparator)[-1], directory)
 
 
 # Extracts the keyframes of the set of videos and stores result in keyframes folder

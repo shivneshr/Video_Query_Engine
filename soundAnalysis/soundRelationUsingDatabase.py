@@ -16,6 +16,7 @@ if platform.system() == "Windows":
 
 # User defined functions
 
+UI_VID_ScriptPath = ".."+fileSeparator+"generateVideos"+fileSeparator
 UI_CNN_ScriptPath = ".."+fileSeparator+"CNNRelation"+fileSeparator
 UI_RGB_ScriptPath = ".."+fileSeparator+"RGBRelation"+fileSeparator
 UI_AUD_ScriptPath = ".."+fileSeparator+"soundAnalysis"+fileSeparator
@@ -24,10 +25,12 @@ UI_AUD_ScriptPath = ".."+fileSeparator+"soundAnalysis"+fileSeparator
 sys.path.append(os.path.abspath(UI_CNN_ScriptPath))
 sys.path.append(os.path.abspath(UI_RGB_ScriptPath))
 sys.path.append(os.path.abspath(UI_AUD_ScriptPath))
+sys.path.append(os.path.abspath(UI_VID_ScriptPath))
 
 import GenerateCNN_Plots as cnn
 import rgbRelationBruteForce as rgb
 import soundRelationUsingDatabase as audio
+import generateTailoredVideos as vid
 
 
 def __findBestMatchedAudio(queryPath):
@@ -74,6 +77,8 @@ def getTop3MathcedAudiosWithTimeFrame(queryAudioName):
     rankedOutput = []
     for i in range (1,4):
         rankedOutput.append((bestMatch[i]['name'],bestMatch[i]['timeFrames']))
+
+    vid.generateVideosForGivenTimeFrames(rankedOutput, 'AUD')
     cnn.generateVideoPlots(rankedOutput, queryAudioName, 'AUD')
     rgb.generateVideoHistogram(rankedOutput, queryAudioName, 'AUD')
     audio.generateAudioMfccImages(rankedOutput, queryAudioName, 'AUD')

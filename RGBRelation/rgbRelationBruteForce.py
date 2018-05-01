@@ -12,6 +12,7 @@ if platform.system() == "Windows":
 
 # User defined functions
 
+UI_VID_ScriptPath = ".."+fileSeparator+"generateVideos"+fileSeparator
 UI_CNN_ScriptPath = ".."+fileSeparator+"CNNRelation"+fileSeparator
 UI_RGB_ScriptPath = ".."+fileSeparator+"RGBRelation"+fileSeparator
 UI_AUD_ScriptPath = ".."+fileSeparator+"soundAnalysis"+fileSeparator
@@ -20,11 +21,12 @@ UI_AUD_ScriptPath = ".."+fileSeparator+"soundAnalysis"+fileSeparator
 sys.path.append(os.path.abspath(UI_CNN_ScriptPath))
 sys.path.append(os.path.abspath(UI_RGB_ScriptPath))
 sys.path.append(os.path.abspath(UI_AUD_ScriptPath))
+sys.path.append(os.path.abspath(UI_VID_ScriptPath))
 
 import GenerateCNN_Plots as cnn
 import rgbRelationBruteForce as rgb
 import soundRelationUsingDatabase as audio
-
+import generateTailoredVideos as vid
 
 def __findHist(imagePath):
     image = cv2.imread(imagePath)
@@ -90,6 +92,7 @@ def getTop3MatchedVideosWithTimeFrame(queryVideoDirName):
     rankedOutput = []
     for i in range(1, 4):
         rankedOutput.append((bestMatch[i]['name'], bestMatch[i]['timeFrames']))
+    vid.generateVideosForGivenTimeFrames(rankedOutput, 'RGB')
     cnn.generateVideoPlots(rankedOutput, queryVideoDirName, 'RGB')
     rgb.generateVideoHistogram(rankedOutput, queryVideoDirName, 'RGB')
     audio.generateAudioMfccImages(rankedOutput, queryVideoDirName, 'RGB')
@@ -138,5 +141,5 @@ def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName, mainTy
     else:
         subprocess.Popen(["sh","../RGBRelation/convertToVideo.sh", "queryRGBMatch"])
 
-#getTop3MatchedVideosWithTimeFrame("first")
+getTop3MatchedVideosWithTimeFrame("first")
 #generateVideoHistogram([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "RGB")
