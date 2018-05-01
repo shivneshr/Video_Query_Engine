@@ -19,11 +19,16 @@ from keras.applications.imagenet_utils import decode_predictions
 # User defined functions
 
 UI_CNN_ScriptPath = "GenerateCNN_Plots.py"
+UI_RGB_ScriptPath = "../RGBRelation/rgbRelationBruteForce.py"
+UI_RGB_ScriptPath = "../soundAnalysis/soundRelationUsingDatabase.py"
 
 # Add the directory containing your module to the Python path (wants absolute paths)
 sys.path.append(os.path.abspath(UI_CNN_ScriptPath))
+sys.path.append(os.path.abspath(UI_CNN_ScriptPath))
 
 import GenerateCNN_Plots as ui
+import rgbRelationBruteForce as rgb
+import soundRelationUsingDatabase as audio
 
 # Load the VGG model
 vgg_model = vgg16.VGG16(weights='imagenet')
@@ -188,10 +193,21 @@ def find_match_CNN(queryPath,databasePath):
 	#with open(location, 'wb') as handle:
 	#	pickle.dump(match_factor, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
+	# {1: {'name': 'musicvideo', 'timeFrames': [4.0, 9.0], 'keyFrames': [9, 17], 'matchPercentage': '99.9855173832883%'}, 2: {'name': 'movie', 'timeFrames': [1.5, 6.5], 'keyFrames': [4, 12], 'matchPercentage': '76.1068256730008%'}, 3: {'name': 'starcraft', 'timeFrames': [6.5, 11.5], 'keyFrames': [14, 22], 'matchPercentage': '71.72459734687709%'}}
+
+	finalDict = {}
 	ctr = 1
+
+	rankedOutput = []
 	for key, value in sorted(match_factor.items(), key=lambda x: x[1]["distance"])[:3]:
+		rankedOutput.append([(key,[(segment / 2.0) - 0.5, (segment+8 / 2.0) + 0.5]),queryPath.split('/')[-1],'CNN'])
 		ui.generateVideoPlots(key,queryPath.split('/')[-1],value['segment'],'CNN',ctr)
 		ctr+=1
+
+
+	rgb.generateVideoHistogram(rankedOutput)
+	audio.generateAudioMfccImages(rankedOutput)
+
 
 		#print("%s: %s" % (key, value))
 
