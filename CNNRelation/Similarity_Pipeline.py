@@ -5,13 +5,25 @@ import cv2
 import numpy as np
 import os
 import pickle
+import re
+import sys
 
 # Deeplearning Libraries and models
-
 from keras.applications import vgg16
 from keras.models import Model
 from keras.preprocessing.image import img_to_array
 from keras.preprocessing.image import load_img
+from keras.applications.imagenet_utils import decode_predictions
+
+
+# User defined functions
+
+UI_CNN_ScriptPath = "GenerateCNN_Plots.py"
+
+# Add the directory containing your module to the Python path (wants absolute paths)
+sys.path.append(os.path.abspath(UI_CNN_ScriptPath))
+
+import GenerateCNN_Plots as ui
 
 # Load the VGG model
 vgg_model = vgg16.VGG16(weights='imagenet')
@@ -35,6 +47,7 @@ currentFolder = ""
 previousFolder = ""
 
 featureList = []
+labelList = []
 
 # only if you want to CNN extraction for specific folders
 onlyfor = []
@@ -47,6 +60,14 @@ databasePath = "/Users/shivnesh/Documents/shivnesh_git/multimedia_project/videos
 
 
 p_frame_thresh = 90000  # You may need to adjust this threshold for keyframes extraction (lower -> more frames)
+
+
+numbers = re.compile(r'(\d+)')
+
+def numericalSort(value):
+	parts = numbers.split(value)
+	parts[1::2] = map(int, parts[1::2])
+	return parts
 
 
 def extractKeyFrames(video_path,videoName,keyframePath):
@@ -110,16 +131,23 @@ def iterateThroughDirectory(directory,keyframepath):
 
 
 def write_to_pickle_file(folder,keyframePath):
-	global featureList, currentFolder, previousFolder
+	global featureList, labelList, currentFolder, previousFolder
 
 	location = keyframePath+folder+'/'+folder+'.pickle'
+	lableLocation = keyframePath+folder+'/'+folder+'_label.pickle'
+
 	with open(location, 'wb') as handle:
 		pickle.dump(featureList, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+	with open(lableLocation, 'wb') as handle:
+		pickle.dump(labelList, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
 	currentFolder = previousFolder
 	featureList = []
+	labelList = []
 
 
-def findDifference(queryPath,databasePath):
+def find_match_CNN(queryPath,databasePath):
 
 	queryFeatures = []
 	databaseFeatures = []
@@ -139,20 +167,33 @@ def findDifference(queryPath,databasePath):
 			databaseFeatures = pickle.load(handle)
 
 		minDist = float('inf')
+		min_index_d = -1
+		min_index_q = -1
 
-		for feature_d in databaseFeatures:
-			for feature_q in queryFeatures:
+		for index_d,feature_d in enumerate(databaseFeatures):
+			for index_q, feature_q in enumerate(queryFeatures):
 				diff = np.absolute(feature_d - feature_q)
 				sum = np.sum(diff)
 				if sum < minDist:
-					minDist = sum
+					minDist, min_index_d, min_index_q = sum, index_d, index_q
 
-		match_factor[folder] = minDist
+		segment = min_index_d - min_index_q
+		match_factor[folder] = {"distance":minDist,"index_d":min_index_d,"index_q":min_index_q,"segment":segment}
 
 
 
-	for key, value in sorted(match_factor.items(), key=lambda x: x[1]):
-		print("%s: %s" % (key, value))
+	#match_factor = sorted(match_factor.items(), key=lambda x: x[1]["distance"])
+
+	#location = '../ui/CNN/similarity/CNN_Similarity.pickle'
+	#with open(location, 'wb') as handle:
+	#	pickle.dump(match_factor, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+	ctr = 1
+	for key, value in sorted(match_factor.items(), key=lambda x: x[1]["distance"])[:3]:
+		ui.generateVideoPlots(key,queryPath.split('/')[-1],value['segment'],'CNN',ctr)
+		ctr+=1
+
+		#print("%s: %s" % (key, value))
 
 
 def extract_CNN_features(path):
@@ -164,6 +205,7 @@ def extract_CNN_features(path):
 		if previousFolder != "" and currentFolder != previousFolder:
 			write_to_pickle_file(previousFolder,path)
 
+		files = sorted([file for file in files if file.endswith('.jpg')], key=numericalSort)
 		for name in files:
 
 			if not (len(onlyfor)==0 or (len(onlyfor)!=0 and (root.split('/')[-1] in onlyfor))):
@@ -171,30 +213,36 @@ def extract_CNN_features(path):
 
 			print(os.path.join(root, name))
 
+			previousFolder = root.split('/')[-1]
+			# Load an image in PIL format
+			original = load_img(os.path.join(root, name), target_size=(224, 224))
 
-			if name.endswith(".jpg"):
-				previousFolder = root.split('/')[-1]
-				# Load an image in PIL format
-				original = load_img(os.path.join(root, name), target_size=(224, 224))
+			# convrt the PIL image to a numpy array
+			# IN PL - image is in (width, height, channel)
+			# In Nmpy - image is in (height, width, channel)
 
-				# convert the PIL image to a numpy array
-				# IN PIL - image is in (width, height, channel)
-				# In Numpy - image is in (height, width, channel)
+			numpy_image = img_to_array(original)
 
-				numpy_image = img_to_array(original)
+			# Convert the image / images into batch format
+			# expand_dims will add an extra dimension to the data at a particular axis
+			# We want the input matrix to the network to be of the form (batchsize, height, width, channels)
+			# Thus we add the extra dimension to the axis 0.
 
-				# Convert the image / images into batch format
-				# expand_dims will add an extra dimension to the data at a particular axis
-				# We want the input matrix to the network to be of the form (batchsize, height, width, channels)
-				# Thus we add the extra dimension to the axis 0.
+			image_batch = np.expand_dims(numpy_image, axis=0)
 
-				image_batch = np.expand_dims(numpy_image, axis=0)
+			# prepare the image for the VGG model
 
-				# prepare the image for the VGG model
-				processed_image = vgg16.preprocess_input(image_batch.copy())
+			processed_image = vgg16.preprocess_input(image_batch.copy())
+			intermediate_output = intermediate_layer_model.predict(processed_image)
+			predictions = vgg_model.predict(processed_image)
 
-				intermediate_output = intermediate_layer_model.predict(processed_image)
-				featureList.append(intermediate_output[0])
+			# print predictions
+			# convert the probabilities to class labels
+			# We will get top 5 predictions which is the default
+
+			label = decode_predictions(predictions)
+			labelList.append(label[0])
+			featureList.append(intermediate_output[0])
 
 		if previousFolder != "" and currentFolder != previousFolder:
 			write_to_pickle_file(previousFolder,path)
@@ -218,7 +266,7 @@ def extract_CNN_features(path):
 
 # Finds the similarity between any given query video & database folders (lower the score better similarity)
 
-findDifference(keyframePath_query+"HQ4.MP4",keyframePath_database)
+find_match_CNN(keyframePath_query+"Q4.MP4",keyframePath_database)
 
 
 
