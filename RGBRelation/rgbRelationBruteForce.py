@@ -79,9 +79,9 @@ def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName, mainTy
     for index, videoDirNameTimeFrame in enumerate(videoDirNameTimeFrameArray):
         videoDirName = videoDirNameTimeFrame[0]
         timeFrames = videoDirNameTimeFrame[1]
-        keyFrames = [int((timeFrames[0]*2)+1), int((timeFrames[1]*2) + 1)]
+        keyFrames = [int((timeFrames[0]*2)+1), int((timeFrames[1]*2) - 1)]
 
-        for i in range(keyFrames[0], keyFrames[1]):
+        for i in range(keyFrames[0], keyFrames[1] + 1):
             filename = ".." + fileSeparator + "keyframes_database" + fileSeparator + videoDirName + fileSeparator + videoDirName + "_frame" + str(
                 i) + ".jpg"
             img = cv2.imread(filename)
@@ -118,5 +118,5 @@ def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName, mainTy
     p.communicate()
     p.wait()
 
-#getTop3MatchedVideosWithTimeFrame("first")
-#generateVideoHistogram([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "RGB")
+getTop3MatchedVideosWithTimeFrame("first")
+generateVideoHistogram([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "RGB")

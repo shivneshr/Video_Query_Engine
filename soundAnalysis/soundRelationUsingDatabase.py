@@ -55,8 +55,8 @@ def getTop3MathcedAudiosWithTimeFrame(queryAudioName):
     return __findBestMatchedAudio(queryPath)
 
 # input
-# videoDirNameArray Eg - [ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ]
-# queryVideoDirName Eg - "first"
+# audioTimeFrameArray Eg - [ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ]
+# queryAudioName Eg - "first"
 # mainType Eg - "CNN"
 def generateAudioMfccImages(audioTimeFrameArray, queryAudioName, mainType):
     queryPath = ".." + fileSeparator + "music_query" + fileSeparator + queryAudioName + ".wav"
