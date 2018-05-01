@@ -120,7 +120,7 @@ def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName, mainTy
         if platform.system() == "Windows":
             subprocess.Popen(["..\\RGBRelation\\convertToVideo.bat", mainType + "_RGB_" + videoDirName + "_" + str(index + 1)])
         else:
-            subprocess.Popen(["../RGBRelation/convertToVideo.bat", mainType + "_RGB_" + videoDirName + "_" + str(index + 1)])
+            subprocess.Popen(["sh","../RGBRelation/convertToVideo.sh", mainType + "_RGB_" + videoDirName + "_" + str(index + 1)])
 
     index = 1
     for filename in glob.glob(queryPath + "*.jpg"):
@@ -136,7 +136,7 @@ def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName, mainTy
     if platform.system() == "Windows":
         subprocess.Popen(["..\\RGBRelation\\convertToVideo.bat", "queryRGBMatch"])
     else:
-        subprocess.Popen(["../RGBRelation/convertToVideo.bat", "queryRGBMatch"])
+        subprocess.Popen(["sh","../RGBRelation/convertToVideo.sh", "queryRGBMatch"])
 
 #getTop3MatchedVideosWithTimeFrame("first")
 #generateVideoHistogram([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "RGB")

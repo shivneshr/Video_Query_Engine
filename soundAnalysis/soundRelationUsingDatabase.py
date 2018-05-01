@@ -102,7 +102,7 @@ def generateAudioMfccImages(audioTimeFrameArray, queryAudioName, mainType):
     if platform.system() == "Windows":
         p = Popen("..\\soundAnalysis\\moveToUI.bat")
     else:
-        p = Popen("../soundAnalysis/moveToUI.sh")
+        p = Popen(["sh","../soundAnalysis/moveToUI.sh"])
 
 #print(getTop3MathcedAudiosWithTimeFrame("first"))
 #generateAudioMfccImages([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "AUD")
