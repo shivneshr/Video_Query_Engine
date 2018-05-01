@@ -43,9 +43,6 @@ def generateVideoPlots(databaseVideoName, queryVideoName, segment, procname,rank
 	for index_d,index_q in zip(range(segment,segment+9),range(0,9)):
 
 		db_label = [[label1[1],label2[1]] for label1,label2 in zip(CNN_DB_Label[index_d],CNN_Query_Label[index_q])]
-		np_db_label = np.array(db_label)
-
-		#query_label = [label[1] for label in CNN_Query_Label[index]]
 
 		diff = np.absolute(CNN_DB_Video[index_d] - CNN_Query_Video[index_q])
 		sum = np.sum(diff)
@@ -55,9 +52,8 @@ def generateVideoPlots(databaseVideoName, queryVideoName, segment, procname,rank
 		ax.xaxis.set_visible(False)
 		ax.yaxis.set_visible(False)
 
-		# Table from Ed Smith answer
 		clust_data = np.array(db_label)
-		#clust_data = np.random.random((10,2))
+
 		collabel = ("Database Video", "Query Video match(" + str(sum) + ")")
 		ax.table(cellText=clust_data, colLabels=collabel, loc='center')
 
@@ -72,9 +68,9 @@ def generateVideoPlots(databaseVideoName, queryVideoName, segment, procname,rank
 		ctr+=1
 
 
-	Popen(['sh','./convertCNNVideo.sh'])
-	shutil.move('raw/CNNMatch.mp4','../ui/CNN/videos/'+videoName)
+	Popen(['sh','./convertCNNVideo.sh',videoName])
+	#shutil.move('raw/CNNMatch.mp4','../ui/CNN/videos/'+videoName)
 
-#Popen(['sh','./convertCNNVideo.sh'])
+#Popen(['sh','./convertCNNVideo.sh','trial.mp4'])
 
 
