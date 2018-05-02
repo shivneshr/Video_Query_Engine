@@ -6,6 +6,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/json" src="CNN.json"></script>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -17,8 +18,67 @@
 
     <script src="popcorn.js"></script>
     <script>
-       angular.module('mediaSearch',[]).controller('searchController', ['$scope', function ($scope) {
-            $scope.asrc = "/Users/shivnesh/Documents/shivnesh_git/multimedia_project/videos/search/musicvideo.mp4"
+
+       angular.module('mediaSearch',[]).controller('searchController', ['$scope','$sce','$http', function ($scope,$sce,$http) {
+
+            $scope.asrc = $sce.trustAsResourceUrl("../videos/search/musicvideo.mp4")
+            $scope.selectedType = "CNN"
+            $scope.videoName = []
+            $scope.selectedVideo = ""
+            $scope.type = ["CNN", "AUD", "RGB"];
+            $scope.angularHeading = 'Video Helper'
+            $scope.CNN = {"1": {"video": "flowers", "time": [1, 6]},"2": {"video": "interview", "time": [0, 5]},"3": {"video": "movie", "time": [10, 15]}}
+            $scope.AUD = {"1": {"video": "flowers", "time": [2, 7]}, "2": {"video": "movie", "time": [13, 18]}, "3": {"video": "interview", "time": [3, 8]}}
+            $scope.RGB = {"1": {"video": "flowers", "time": [2, 7]}, "2": {"video": "interview", "time": [6, 11]}, "3": {"video": "sports", "time": [14, 19]}}
+
+            // Initialize the firt values
+            initialize()
+
+            function initialize(){
+
+              $scope.videoName = [$scope.CNN["1"]["video"]+"_1",$scope.CNN["2"]["video"]+"_2",$scope.CNN["3"]["video"]+"_3"]
+              $scope.selectedVideo = $scope.videoName[0]
+              $scope.selectedType = $scope.type[0]
+
+              assignValues()
+            }
+
+            function assignValues(){
+
+              // Main videos
+
+              $scope.asrc = $sce.trustAsResourceUrl("videos/"+$scope.selectedType+"_"+$scope.selectedVideo+".mp4")
+              $scope.bsrc = $sce.trustAsResourceUrl("videos/"+$scope.selectedType+"_"+$scope.selectedVideo+".mp4")
+
+              // CNN Videos
+              $scope.csrc = $sce.trustAsResourceUrl("CNN/"+$scope.selectedType+"_CNN_"+$scope.selectedVideo+".mp4")
+
+              // RGB Videos
+              $scope.dsrc = $sce.trustAsResourceUrl("rgb/"+$scope.selectedType+"_RGB_"+$scope.selectedVideo+".mp4")
+              $scope.esrc = $sce.trustAsResourceUrl("rgb/queryRGBMatch.mp4")
+
+              // Audio Videos
+              $scope.fsrc = $sce.trustAsResourceUrl("sound/"+$scope.selectedType+"_AUD_"+$scope.selectedVideo+".png")
+              $scope.gsrc = $sce.trustAsResourceUrl("sound/queryMFCC.png")
+            }
+
+            $scope.changeType = function()
+            {
+              if($scope.selectedType=='CNN'){
+                $scope.videoName = [$scope.CNN["1"]["video"]+"_1",$scope.CNN["2"]["video"]+"_2",$scope.CNN["3"]["video"]+"_3"]
+              }else if($scope.selectedType=='AUD'){
+                $scope.videoName = [$scope.AUD["1"]["video"]+"_1",$scope.AUD["2"]["video"]+"_2",$scope.AUD["3"]["video"]+"_3"]
+              }else if($scope.selectedType=='RGB'){
+                $scope.videoName = [$scope.RGB["1"]["video"]+"_1",$scope.RGB["2"]["video"]+"_2",$scope.RGB["3"]["video"]+"_3"]
+              }
+              $scope.selectedVideo = $scope.videoName[0]
+              assignValues()
+            }
+
+            $scope.changeVideo = function(){
+              assignValues()
+            }
+
            /*$scope.playVideo = function (){
                var queryPlayer = document.getElementById("queryPlayer");
                queryPlayer.pause();
@@ -35,6 +95,11 @@
       max-height: 90%;
     }
 
+    img{
+      max-width: 90%;
+      max-height: 300px;
+    }
+
     .form-ele {
       max-width:80%;
     }
@@ -42,20 +107,37 @@
 </head>
 <body>
   <center>
-    <div class="jumbotron">
-      <h2>Video Similarity Indexer and Search</h2>
-    </div>
     <div ng-app="mediaSearch" ng-controller="searchController" class="query" style="width: 90%;">
+      <div class="jumbotron">
+        <h2>{{angularHeading}}</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <div class="row">
+            <h3>Audio Video</h3>
+          </div>
+          <div class="row">
+            <img ng-src={{fsrc}} id="f"></img>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+          <div class="row">
+            <h3>Audio Query</h3>
+          </div>
+          <div class="row">
+            <img ng-src={{gsrc}} id="g"></img>
+          </div>
+        </div>
+      </div>
+
       <div class="row">
         <div class="col-md-4 col-sm-4">
           <div class="row">
             <label for="type">Type Select</label>
           </div>
           <div class="form-ele row">
-            <select class="form-control" id="type">
-              <option>CNN</option>
-              <option>RGB</option>
-              <option>Audio</option>
+            <select class="form-control" ng-model="selectedType" ng-change="changeType()" ng-options="x for x in type">
             </select>
           </div>
         </div>
@@ -64,10 +146,7 @@
             <label for="matched">Matched Videos</label>
           </div>
           <div class="row form-ele">
-            <select class="form-control" id="type">
-              <option>Video 1</option>
-              <option>Video 2</option>
-              <option>Video 3</option>
+            <select class="form-control" ng-model="selectedVideo" ng-change="changeVideo()" ng-options="x for x in videoName">
             </select>
           </div>
         </div>
@@ -82,43 +161,29 @@
       </div>
 
       <div class="row">
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-4 col-sm-4 col-xs-4">
           <div class="row">
             <h3>CNN Match</h3>
           </div>
           <div class="row">
-            <video id="c">
-              <source src="../videos/search/musicvideo.mp4"></source>
+            <video ng-src="{{csrc}}" id="c"></video>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-4">
+          <div class="row">
+            <h3>RGB Video</h3>
+          </div>
+          <div class="row">
+            <video ng-src={{dsrc}} id="d">
             </video>
           </div>
         </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
+        <div class="col-md-4 col-sm-4 col-xs-4">
           <div class="row">
-            <h3>RGB Match</h3>
+            <h3>RGB Query</h3>
           </div>
           <div class="row">
-            <video id="d">
-              <source src="../videos/search/musicvideo.mp4"></source>
-            </video>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
-          <div class="row">
-            <h3>Audio Match</h3>
-          </div>
-          <div class="row">
-            <video id="e">
-              <source src="../videos/search/musicvideo.mp4"></source>
-            </video>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-3 col-xs-3">
-          <div class="row">
-            <h3>Motion Estimation</h3>
-          </div>
-          <div class="row">
-            <video id="f">
-              <source src="../videos/search/musicvideo.mp4"></source>
+            <video ng-src={{esrc}} id="e">
             </video>
           </div>
         </div>
@@ -130,8 +195,7 @@
             <h3>Original Video</h3>
           </div>
           <div class="row">
-            <video id="a" controls>
-              <source src="../videos/search/musicvideo.mp4"></source>
+            <video id="a" ng-src={{asrc}} controls>
             </video>
           </div>
         </div>
@@ -140,8 +204,7 @@
             <h3>Query Video</h3>
           </div>
           <div class="row">
-            <video id="b">
-              <source src="../videos/search/musicvideo.mp4"></source>
+            <video id="b" ng-src={{bsrc}}>
             </video>
           </div>
         </div>
@@ -156,7 +219,6 @@
       c: Popcorn("#c"),
       d: Popcorn("#d"),
       e: Popcorn("#e"),
-      f: Popcorn("#f")
     },
     scrub = $("#scrub"),
     loadCount = 0,
@@ -196,7 +258,6 @@
                 videos.c.emit("timeupdate");
                 videos.d.emit("timeupdate");
                 videos.e.emit("timeupdate");
-                videos.f.emit("timeupdate");
 
                 // update scrubber
                 scrub.val(this.currentTime());
@@ -208,7 +269,6 @@
                 videos.c.currentTime(this.currentTime());
                 videos.d.currentTime(this.currentTime());
                 videos.e.currentTime(this.currentTime());
-                videos.f.currentTime(this.currentTime());
               }
 
               if (event === "play" || event === "pause") {
@@ -216,7 +276,6 @@
                 videos.c[event]();
                 videos.d[event]();
                 videos.e[event]();
-                videos.f[event]();
               }
             });
           });
@@ -231,7 +290,6 @@
       videos.c.currentTime(val);
       videos.d.currentTime(val);
       videos.e.currentTime(val);
-      videos.f.currentTime(val);
     });
 
     // With requestAnimationFrame, we can ensure that as
@@ -243,13 +301,11 @@
           videos.a.currentTime(
             videos.c.currentTime(
               videos.d.currentTime(
-                videos.e.currentTime(
-                  videos.f.currentTime()
+                videos.e.currentTime()
                 )
               )
             )
-          )
-        );
+          );
       }
       requestAnimationFrame(sync);
     }
