@@ -141,5 +141,5 @@ def generateVideoHistogram(videoDirNameTimeFrameArray, queryVideoDirName, mainTy
     else:
         subprocess.Popen(["sh","../RGBRelation/convertToVideo.sh", "queryRGBMatch"])
 
-getTop3MatchedVideosWithTimeFrame("first")
+#getTop3MatchedVideosWithTimeFrame("first")
 #generateVideoHistogram([ ("musicVideo",[1,6]) , ("flowers",[1.5,6.5]), ("sports",[9.5,14.5]) ] , "first", "RGB")

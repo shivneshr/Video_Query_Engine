@@ -21,18 +21,28 @@
 
        angular.module('mediaSearch',[]).controller('searchController', ['$scope','$sce','$http', function ($scope,$sce,$http) {
 
-            $scope.asrc = $sce.trustAsResourceUrl("../videos/search/musicvideo.mp4")
             $scope.selectedType = "CNN"
             $scope.videoName = []
             $scope.selectedVideo = ""
             $scope.type = ["CNN", "AUD", "RGB"];
             $scope.angularHeading = 'Video Helper'
-            $scope.CNN = {"1": {"video": "flowers", "time": [1, 6]},"2": {"video": "interview", "time": [0, 5]},"3": {"video": "movie", "time": [10, 15]}}
-            $scope.AUD = {"1": {"video": "flowers", "time": [2, 7]}, "2": {"video": "movie", "time": [13, 18]}, "3": {"video": "interview", "time": [3, 8]}}
-            $scope.RGB = {"1": {"video": "flowers", "time": [2, 7]}, "2": {"video": "interview", "time": [6, 11]}, "3": {"video": "sports", "time": [14, 19]}}
+            $http.get("AUD.json").then(function(response){
+              $scope.AUD = response.data;
+              $http.get("CNN.json").then(function(response){
+              $scope.CNN = response.data;
+              $http.get("RGB.json").then(function(response){
+              $scope.RGB = response.data;
+              initialize()
+            },function(){});
+            },function(){});
+            },function(){});
+  
+            // $scope.CNN = {"1": {"video": "flowers", "time": [1, 6]},"2": {"video": "interview", "time": [0, 5]},"3": {"video": "movie", "time": [10, 15]}}
+            // $scope.AUD = {"1": {"video": "flowers", "time": [2, 7]}, "2": {"video": "movie", "time": [13, 18]}, "3": {"video": "interview", "time": [3, 8]}}
+            // $scope.RGB = {"1": {"video": "flowers", "time": [2, 7]}, "2": {"video": "interview", "time": [6, 11]}, "3": {"video": "sports", "time": [14, 19]}}
 
             // Initialize the firt values
-            initialize()
+            //initialize()
 
             function initialize(){
 
@@ -48,7 +58,7 @@
               // Main videos
 
               $scope.asrc = $sce.trustAsResourceUrl("videos/"+$scope.selectedType+"_"+$scope.selectedVideo+".mp4")
-              $scope.bsrc = $sce.trustAsResourceUrl("videos/"+$scope.selectedType+"_"+$scope.selectedVideo+".mp4")
+              $scope.bsrc = $sce.trustAsResourceUrl("query.mp4")
 
               // CNN Videos
               $scope.csrc = $sce.trustAsResourceUrl("CNN/"+$scope.selectedType+"_CNN_"+$scope.selectedVideo+".mp4")

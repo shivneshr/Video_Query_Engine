@@ -108,7 +108,7 @@ def extractKeyFrames(video_path, videoName, keyframePath):
 
 
 def extractKeyFrames_Second(video_path, videoName, keyframePath):
-    cap = cv2.VideoCapture(video_path)
+    cap = cv2.VideoCapture(video_path+".mp4")
     # Read the first frame.
     ret, frame = cap.read()
 
@@ -124,7 +124,7 @@ def extractKeyFrames_Second(video_path, videoName, keyframePath):
 
         if frameId % multiplier == 0 and ret:
             count += 1
-            cv2.imwrite(keyframePath + "%s"+fileSeparator+"%s_frame%d.jpg" % (videoName, videoName, count), frame)
+            cv2.imwrite((keyframePath + "%s"+fileSeparator+"%s_frame%d.jpg") % (videoName, videoName, count), frame)
 
     cap.release()
     print("Complete")
